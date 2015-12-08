@@ -53,3 +53,40 @@ function averageSelected(values) {
   var average = sumOf / values.length;
   changeAnswer(average);
 }
+function printAllNames() {
+  $('#answer').empty();
+  var values = $('.all-names').val();
+  var allNames = values.split("\n");
+  for(var i = 0; i < allNames.length; i++){
+    addToList(values.split("\n")[i]);
+  }
+}
+
+function printFirstNames() {
+  $('#answer').empty();
+  var values = $('.all-names').val();
+  var allNames = values.split("\n");
+  for(var i = 0; i < allNames.length; i++){
+    addToList(values.split("\n")[i].split(" ")[0]);
+  }
+}
+
+
+function printLastNames() {
+  $('#answer').empty();
+  var values = $('.all-names').val();
+  var allNames = values.split("\n");
+  for(var i = 0; i < allNames.length; i++){
+    addToList(values.split("\n")[i].split(" ")[1]);
+  }
+}
+
+function printAllNamesAndLength() {
+  console.log("fuck");
+  $('#answer').empty();
+  var values = $('.all-names').val();
+  var allNames = values.split("\n");
+  for(var i = 0; i < allNames.length; i++){
+    addToList(values.split("\n")[i] + " " + values.split("\n")[i].length);
+  }
+}

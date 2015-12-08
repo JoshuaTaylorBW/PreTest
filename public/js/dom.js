@@ -10,22 +10,39 @@ Hints for the first problem:
 
 */
 
-document.getElementById("sum-all").addEventListener("click", function () {
+$("#sum-all").click(function () {
   sum($(".all-prices"));
 });
-document.getElementById("count-selected").addEventListener("click", function () {
+$("#count-selected").click(function () {
   countSelected($(".all-prices").val());
 });
-document.getElementById("sum-selected").addEventListener("click", function () {
+$("#sum-selected").click(function () {
   sumSelected($(".all-prices").val());
 });
-document.getElementById("average-all").addEventListener("click", function () {
+$("#average-all").click(function () {
   average($(".all-prices").val());
 });
-document.getElementById("average-selected").addEventListener("click", function () {
+$("#average-selected").click(function () {
   averageSelected($(".all-prices").val());
 });
+$("#all-names").click(function () {
+  printAllNames();
+})
+
+$("#first-names").click(function () {
+  printFirstNames();
+})
+
+$("#last-names").click(function () {
+  printLastNames();
+})
+$("#names-with-lengths").click(function () {
+  printAllNamesAndLength();
+})
 
 function changeAnswer(value){
   document.getElementById("results").innerHTML = value;
+}
+function addToList(value) {
+  $("#answer").append("<li>"+value+"</li>")
 }
