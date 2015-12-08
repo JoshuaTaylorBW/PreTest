@@ -11,7 +11,7 @@ Hints for the first problem:
 */
 
 $("#sum-all").click(function () {
-  sum($('.all-prices option'));
+  sum($(".all-prices"));
 });
 $("#count-selected").click(function () {
   countSelected($(".all-prices").val());
@@ -20,29 +20,24 @@ $("#sum-selected").click(function () {
   sumSelected($(".all-prices").val());
 });
 $("#average-all").click(function () {
-  average($('.all-prices option'));
+  average($(".all-prices").val());
 });
 $("#average-selected").click(function () {
   averageSelected($(".all-prices").val());
 });
 $("#all-names").click(function () {
-
-  $('#answer').empty();
-  printAllNames($('.all-names').val());
+  printAllNames();
 })
 
 $("#first-names").click(function () {
-  $('#answer').empty();
-  printFirstNames($('.all-names').val());
+  printFirstNames();
 })
 
 $("#last-names").click(function () {
-  $('#answer').empty();
-  printLastNames($('.all-names').val());
+  printLastNames();
 })
 $("#names-with-lengths").click(function () {
-  $('#answer').empty();
-  printAllNamesAndLength($('.all-names').val());
+  printAllNamesAndLength();
 })
 
 function changeAnswer(value){
