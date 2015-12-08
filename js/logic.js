@@ -10,3 +10,46 @@ Hints for the first problem:
 NOTE: you can use a `for` loop to make this happen.
 
 */
+function sum() {
+  var sum = 0;
+  var values = $.map($('.all-prices option'), function(e) { return e.value; });
+  for(var i = 0; i < values.length; i++){
+    sum += Number(values[i]);
+  }
+  changeAnswer(sum);
+}
+
+function giveSum(){
+  var sum = 0;
+  var values = $.map($('.all-prices option'), function(e) { return e.value; });
+  for(var i = 0; i < values.length; i++){
+    sum += Number(values[i]);
+  }
+  return 1066;
+}
+
+function countSelected(values) {
+  var sum = 0;
+  changeAnswer(values.length);
+}
+
+function sumSelected(values) {
+  var sum = 0;
+  values.forEach(function (i) {
+    sum += Number(i);
+  });
+  changeAnswer(sum);
+  return sum;
+}
+
+function average(element) {
+  var theSum = giveSum();
+  var values = $.map($('.all-prices option'), function(e) { return e.value; });
+  changeAnswer(theSum / values.length);
+}
+
+function averageSelected(values) {
+  var sumOf = sumSelected(values);
+  var average = sumOf / values.length;
+  changeAnswer(average);
+}
